@@ -15,9 +15,9 @@ body {
   bottom: 0;
   background: #021124;
   overflow-y: auto; /* O objetivo do overflow é fazer com que conteúdos muito grandes possam caber dentro de uma página através do uso de barras de rolagem. */
-  width: 250px;
+  width: 230px;
   transition: all ease-in-out 0.5s; /* Transição da barra. */
-  padding: 0 15px;
+  padding: 0 12px;
   z-index: 99997; /* Sobrepor a todos elementos */
 }
 
@@ -44,7 +44,7 @@ body {
   background-color: #212431;
   color: #fff;
   padding: 0.6rem;
-  margin-right: 1rem;
+  margin-right: 0.8rem;
   border-radius: 50%;
   transition: 0.3s;
   text-decoration: none;
@@ -92,7 +92,7 @@ body {
 }
 
 #main {
-  margin-left: 250px;
+  margin-left: 230px;
 }
 
 section#inicio {
@@ -185,4 +185,49 @@ i.menu-mobile {
 
 .section-bg {
   background-color: #eff5ff;
+}
+
+.cv .cv-title {
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cv .cv-item {
+  position: relative;
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid #033575;
+}
+
+.cv .cv-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: 16px;
+  height: 16px;
+  background-color: #eae9ec;
+  border: 2px solid #000813;
+  border-radius: 50%;
+}
+
+.cv-item h4 {
+  text-transform: uppercase;
+  line-height: 18px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+}
+
+.cv-item h5 {
+  font-size: 15px;
+  padding: 6px 15px;
+  background-color: #d6edf8;
+  display: inline-block;
+  margin-top: 2px;
+}
+
+.carousel-indicators {
+  margin-bottom: -35px;
 }
