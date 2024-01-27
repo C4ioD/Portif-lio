@@ -15,7 +15,7 @@ body {
   bottom: 0;
   background: #021124;
   overflow-y: auto; /* O objetivo do overflow é fazer com que conteúdos muito grandes possam caber dentro de uma página através do uso de barras de rolagem. */
-  width: 230px;
+  width: 250px;
   transition: all ease-in-out 0.5s; /* Transição da barra. */
   padding: 0 12px;
   z-index: 99997; /* Sobrepor a todos elementos */
@@ -92,7 +92,7 @@ body {
 }
 
 #main {
-  margin-left: 230px;
+  margin-left: 250px;
 }
 
 section#inicio {
@@ -230,4 +230,45 @@ i.menu-mobile {
 
 .carousel-indicators {
   margin-bottom: -35px;
+}
+/* animaçao */
+
+[data-anime] {
+  opacity: 0;
+  transition: 1s;
+}
+
+[data-anime="down"] {
+  transform: translate3d(0, -100%, 0);
+}
+
+[data-anime="up"] {
+  transform: translate3d(0, 100%, 0);
+}
+
+[data-anime="left"] {
+  transform: translate3d(-100%, 0, 0);
+}
+
+[data-anime="right"] {
+  transform: translate3d(50px, 0, 0);
+}
+
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+#btn-enviar-loader {
+  display: none;
+}
+
+#alerta {
+  margin-bottom: 0px;
+}
+
+@media (max-width: 1860px) {
+  [data-anime="rigth"] {
+    transform: translate3d(-100%, 0, 0);
+  }
 }
